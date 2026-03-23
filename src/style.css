@@ -1,0 +1,14 @@
+:root{
+    --back-video-height: 802px
+}
+#back-video {
+  height: var(--back-video-height);
+  background-color: aquamarine;
+  position: relative;
+  z-index: 1;
+}
+#home-container{
+    position: relative;
+    bottom: var(--back-video-height);
+    z-index: 2;
+}
