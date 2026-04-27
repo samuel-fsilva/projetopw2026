@@ -1,16 +1,21 @@
-let sreenWidth = window.getComputedStyle(document.body).width;
+let screenWidth = window.getComputedStyle(document.body).width;
+let video = document.getElementById("background-video");
 
 window.addEventListener("load", () => {
-  if (parseFloat(sreenWidth) < 450) {
-    let video = document.getElementById("background-video");
-    video.remove();
-    let imgs = document.querySelectorAll("img");
-    imgs.forEach((img) => {
-      console.log(img.src)
-    });
-
-    /*dotsImages.forEach(dotImg => {
-       dotImg.remove() 
-    });*/
-  }
+  setVideo();
 });
+
+window.addEventListener("resize", () => {
+  setVideo();
+});
+
+function setVideo() {
+  screenWidth = window.getComputedStyle(document.body).width;
+  if (video != undefined && parseFloat(screenWidth) < 450) {
+    console.log(0);
+    video.style.display = "none";
+  } else {
+        video.style.display = "flex";
+
+  }
+}

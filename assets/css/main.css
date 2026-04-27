@@ -10,7 +10,18 @@
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
 2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
 */
-
+.blur{
+  backdrop-filter: blur(10px);
+}
+.text-1{
+  color: rgb(255, 255, 255) !important;
+  font-weight: 600;
+    text-shadow: 1.5px 1.5px 6px #000000;
+}
+:root{
+ /* --title-color: #32beff;*/
+ --title-color: #ffffff ;
+}
 *,
 ::before,
 ::after {
@@ -630,6 +641,10 @@ h6:where([data-web-theme="dark"], [data-web-theme="dark"] *) {
 h1 {
   font-size: 3rem;
   line-height: 1.25;
+  color: var(--title-color) !important;
+  /*text-shadow: 3px 3px 6px var(--title-color);*/
+  border-bottom: 2px solid var(--title-color);
+  
 }
 
 h2 {
@@ -1030,7 +1045,6 @@ p + p {
 @media (min-width: 1024px) {
   .ic-page-scroll.active {
     --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity));
     opacity: 0.7;
   }
 
@@ -2161,8 +2175,8 @@ p + p {
 
 .text-primary-color {
   --tw-text-opacity: 1;
-  /* color: rgb(255 255 255 / var(--tw-text-opacity));*/
-  color: #ffedcb;
+   color: rgb(255 255 255 / var(--tw-text-opacity));
+
 }
 
 .text-primary-color\/60 {
@@ -2172,6 +2186,10 @@ p + p {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.txt-shadow{
+  text-shadow: 1px 0px 1px #CCCCCC, 0px 1px 1px #EEEEEE, 2px 1px 1px #CCCCCC, 1px 2px 1px #EEEEEE, 3px 2px 1px #CCCCCC, 2px 3px 1px #EEEEEE, 4px 3px 1px #CCCCCC, 3px 4px 1px #EEEEEE, 5px 4px 1px #CCCCCC, 4px 5px 1px #EEEEEE, 6px 5px 1px #CCCCCC, 5px 6px 1px #EEEEEE, 7px 6px 1px #CCCCCC;
 }
 
 .opacity-0 {
@@ -2684,7 +2702,7 @@ p + p {
 
   .lg\:text-primary-color {
     --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity));
+    color: rgb(0 0 0 / var(--tw-text-opacity));
   }
 
   .lg\:shadow-none {
