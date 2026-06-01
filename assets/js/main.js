@@ -6,6 +6,7 @@ var pageLoading = document.querySelector(".page-loading");
 if (pageLoading) {
   window.addEventListener("load", () => {
     pageLoading.classList.add("hide");
+    document.querySelectorAll(".tabs-link")[0].click()
 
     setTimeout(() => {
       pageLoading.style.display = "none";
@@ -145,7 +146,8 @@ pageLink.forEach((link) => {
   });
 });
 
-// Tabs
+// Tabs //
+/*
 const tabs = document.querySelectorAll(".tabs");
 
 tabs.forEach((tab) => {
@@ -199,6 +201,7 @@ tabs.forEach((tab) => {
     }
   });
 });
+*/
 
 // Portfolio filter
 const portfolioFilters = document.querySelectorAll(".portfolio-menu button");
