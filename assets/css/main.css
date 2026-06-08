@@ -11,6 +11,10 @@
 2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
 */
 
+.vantagens-icones {
+  height: 40px;
+}
+
 .blur {
   backdrop-filter: blur(10px);
 }
@@ -35,7 +39,8 @@
   color: black !important;
   font-weight: 600;
 }
-.text-1:where([data-web-theme="dark"], [data-web-theme="dark"] *), h1:where([data-web-theme="dark"], [data-web-theme="dark"] *){
+.text-1:where([data-web-theme="dark"], [data-web-theme="dark"] *),
+h1:where([data-web-theme="dark"], [data-web-theme="dark"] *) {
   color: white !important;
 }
 :root {
@@ -666,7 +671,6 @@ h1 {
 h1:where([data-web-theme="light"], [data-web-theme="light"] *) {
   color: black !important;
 }
-
 
 h2 {
   font-size: 2.25rem;
@@ -1321,6 +1325,10 @@ p + p {
 
 .bottom-\[117px\] {
   bottom: 117px;
+}
+
+.left-10 {
+  left: -10px;
 }
 
 .left-0 {
